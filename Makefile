@@ -1,5 +1,5 @@
 CHROMEDRIVER=https://chromedriver.storage.googleapis.com/77.0.3865.40/chromedriver_$(PLATFORM).zip
-DESTDRIVER=/usr/local/bin
+DESTDRIVER=/usr/local/
 
 ifndef PLATFORM
 PLATFORM=mac64
