@@ -1,5 +1,9 @@
 # NASA APOD
 
+[![Build Status](https://travis-ci.com/vinicyusmacedo/nasa-apod.svg?branch=master)](https://travis-ci.com/vinicyusmacedo/nasa-apod)
+
+[![codecov](https://codecov.io/gh/vinicyusmacedo/nasa-apod/branch/master/graph/badge.svg)](https://codecov.io/gh/vinicyusmacedo/nasa-apod)
+
 This is a simple web app to showcase stuff such as testing. 
 
 It contains:
