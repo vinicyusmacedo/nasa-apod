@@ -14,7 +14,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
-    "lint": "prettier"
+    "check-lint": "prettier --check 'src/**/*.js'",
+    "fix-lint": "prettier --write 'src/**/*.js'"
   },
   "eslintConfig": {
     "extends": "react-app"
