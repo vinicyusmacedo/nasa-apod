@@ -14,3 +14,5 @@ It contains:
 `PLATFORM=win32 make install-test` will install ChromeDriver for win32. 
 
 Other possible options are `mac64` and `linux64`. The default is `mac64`.
+
+If you want to use Chrome in headless mode, set the env var `CHROMEHEADLESS=true`.

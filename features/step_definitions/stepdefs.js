@@ -1,6 +1,6 @@
 const assert = require('assert');
 const { Given, When, Then } = require('cucumber');
-const webdriver = require('selenium-webdriver');
+const chrome = require('selenium-webdriver/chrome');
 const {Builder, By, Key, until} = require('selenium-webdriver');
 
 function isItFriday(today) {
@@ -19,11 +19,21 @@ Then('I should be told {string}', function (expectedAnswer) {
   assert.equal(this.actualAnswer, expectedAnswer);
 });
 
-Given('I am on the Google search page', async function () {
+Given('I am on the Google search page', {timeout: 2 * 5000}, async function () {
     try {
-        this.driver = await new Builder()
-            .forBrowser('chrome')
-            .build();
+        var headless = process.env.CHROMEHEADLESS || false;
+
+        if (headless) {
+            console.log("Testing in headless mode");
+            this.driver = await new Builder()
+                .forBrowser('chrome')
+                .setChromeOptions(new chrome.Options().headless())
+                .build();
+        } else {
+            this.driver = await new Builder()
+                .forBrowser('chrome')
+                .build();
+        }
         await this.driver.get('http://www.google.com/ncr');
     } catch (e) {
         console.error("error starting webdriver", e);
