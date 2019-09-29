@@ -4,7 +4,8 @@
   "description": "This is a simple web app to showcase stuff such as testing.",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js"
+    "test": "cucumber-js",
+    "ci": "cucumber-js && codecov"
   },
   "keywords": [],
   "author": "",

@@ -22,16 +22,17 @@ Then('I should be told {string}', function (expectedAnswer) {
 Given('I am on the Google search page', {timeout: 2 * 5000}, async function () {
     try {
         var headless = process.env.CHROMEHEADLESS || false;
-
+        var chromeOpts = new chrome.Options().addArguments("--no-sandbox");
         if (headless) {
             console.log("Testing in headless mode");
             this.driver = await new Builder()
                 .forBrowser('chrome')
-                .setChromeOptions(new chrome.Options().headless())
+                .setChromeOptions(chromeOpts.headless())
                 .build();
         } else {
             this.driver = await new Builder()
                 .forBrowser('chrome')
+                .setChromeOptions(chromeOpts)
                 .build();
         }
         await this.driver.get('http://www.google.com/ncr');
