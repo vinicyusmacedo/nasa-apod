@@ -5,7 +5,7 @@ on: [push]
 jobs:
   build:
 
-    runs-on: windows-2019
+    runs-on: ubuntu-1804
 
     strategy:
       matrix:
@@ -17,10 +17,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: path
-      run:
-        echo $ChromeWebDriver
-      shell: powershell
+    - name: Install chromedriver
+      run: |
+        sudo apt-get install chromium-chromedriver
     - name: npm install, build, and test
       run: |
         npm install
@@ -29,4 +28,3 @@ jobs:
       env:
         CI: true
         CHROMEHEADLESS: true
-      shell: powershell
