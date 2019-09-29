@@ -17,6 +17,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - name: Install chromedriver
+      run: make install-test
     - name: npm install, build, and test
       run: |
         npm install
@@ -24,3 +26,4 @@ jobs:
         npm test
       env:
         CI: true
+        CHROMEHEADLESS: true
