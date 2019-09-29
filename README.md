@@ -1,8 +1,8 @@
 # NASA APOD
 
 [![Build Status](https://travis-ci.com/vinicyusmacedo/nasa-apod.svg?branch=master)](https://travis-ci.com/vinicyusmacedo/nasa-apod)
-
 [![codecov](https://codecov.io/gh/vinicyusmacedo/nasa-apod/branch/master/graph/badge.svg)](https://codecov.io/gh/vinicyusmacedo/nasa-apod)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 This is a simple web app to showcase stuff such as testing. 
 
