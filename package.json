@@ -13,7 +13,8 @@
     "test": "react-scripts test --coverage && cucumber-js",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "lint": "prettier"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -33,9 +34,14 @@
   "devDependencies": {
     "@storybook/addon-actions": "^5.2.1",
     "@storybook/addon-links": "^5.2.1",
+    "@storybook/addon-storyshots": "^5.2.1",
     "@storybook/addons": "^5.2.1",
     "@storybook/react": "^5.2.1",
+    "babel-plugin-macros": "^2.6.1",
     "cucumber": "^5.1.0",
+    "prettier": "1.18.2",
+    "react-test-renderer": "^16.10.1",
+    "require-context.macro": "^1.2.1",
     "selenium-webdriver": "^4.0.0-alpha.5"
   }
 }

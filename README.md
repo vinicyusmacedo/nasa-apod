@@ -11,7 +11,7 @@ It contains:
 - Behavior Driven Development examples using Cucumber and Selenium
 - React examples
 - Jest examples
-- Storybook examples
+- Storybook examples (set up with the help of https://www.learnstorybook.com/react/en/get-started/)
 
 `PLATFORM=win32 make install-test` will install ChromeDriver for win32. 
 
