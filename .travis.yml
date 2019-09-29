@@ -7,7 +7,7 @@ before_install:
 - sudo apt-get install chromium-chromedriver
 - npm install -g codecov
 script:
-- npm test
+- npm test --coverage
 - codecov
 env:
   global:
