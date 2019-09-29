@@ -1,0 +1,16 @@
+{
+  "name": "nasa-apod",
+  "version": "1.0.0",
+  "description": "This is a simple web app to showcase stuff such as testing.",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cucumber": "^5.1.0",
+    "selenium-webdriver": "^4.0.0-alpha.5"
+  }
+}
